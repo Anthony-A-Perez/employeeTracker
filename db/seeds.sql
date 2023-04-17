@@ -25,21 +25,21 @@ INSERT INTO role (title, salary, department_id)
 VALUE ("Lawyer", 190000, 4);
 
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Margot", "Wilson", null, 1)
+VALUE ("Margot", "Wilson", null, 1);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Richie", "Barton", null, 2)
+VALUE ("Richie", "Barton", null, 2);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Eli", "Cash", null, 3)
+VALUE ("Eli", "Cash", null, 3);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Raleigh", "St. Claire", 1, 4)
+VALUE ("Raleigh", "St. Claire", 1, 4);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Henry", "Sherman", 4, 5)
+VALUE ("Henry", "Sherman", 4, 5);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Royal", "Tenenbaum", 1, 6)
+VALUE ("Royal", "Tenenbaum", 1, 6);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
 VALUE ("Etheline", "Rogers", 2, 7);
 
-SELECT * FROM department;
-SELECT * FROM role;
-SELECT * FROM employee;
+-- SELECT * FROM department;
+-- SELECT * FROM role;
+-- SELECT * FROM employee;
 
