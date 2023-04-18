@@ -17,7 +17,7 @@ const db = mysql.createConnection({
 
 db.connect(function (err) {
     if (err) throw err
-    console.log('connected');
+
     startPrompt();
 });
 
@@ -145,8 +145,8 @@ function addEmployee() {
             choices: selectManager()
         },
     ]).then(function (val) {
-        let roleId = selectRole().indexOf(val.role) + 1
-        let managerId = selectManager().indexOf(val.choice) + 1
+        let roleId = selectRole().indexOf(val.role)
+        let managerId = selectManager().indexOf(val.choice)
         db.query('INSERT INTO employee SET ?',
             {
                 first_name: val.firstname,
@@ -185,14 +185,9 @@ function updateEmployee() {
             choices: roleChoices
         },
         ]).then(function (val) {
-            let roleId = roleChoices.lastIndexOf(val.role) + 1;
-            db.query('UPDATE employee SET ? WHERE ?',
-                [{
-                    role_id: roleId
-                },
-                {
-                    last_name: val.lastName
-                }],
+            let roleId = roleChoices.indexOf(val.role);
+            db.query('UPDATE employee SET role_id = ? WHERE last_name = ?',
+                [roleId, val.lastName],
                 function (err) {
                     if (err) throw err
                     console.table(val)
@@ -203,11 +198,11 @@ function updateEmployee() {
 }
 
 function addRole() {
- 
+
     db.query('SELECT id, name FROM department', function (err, res) {
         if (err) throw err;
 
-      
+
         inquirer.prompt([
             {
                 name: 'DepartmentId',
@@ -231,7 +226,7 @@ function addRole() {
                 message: 'Salary:'
             }
         ]).then(function (answers) {
-            
+
             db.query(
                 'INSERT INTO role SET ?',
                 {

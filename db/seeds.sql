@@ -39,7 +39,5 @@ VALUE ("Royal", "Tenenbaum", 1, 6);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
 VALUE ("Etheline", "Rogers", 2, 7);
 
--- SELECT * FROM department;
--- SELECT * FROM role;
--- SELECT * FROM employee;
+
 
