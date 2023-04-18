@@ -1,4 +1,5 @@
 
+-- seed data for the initial populating of the database
 
 INSERT INTO department (name)
 VALUE ("Sales");

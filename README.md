@@ -27,6 +27,8 @@ Run node app.js to start the application.
 
 ## Demo
 
+<https://drive.google.com/file/d/1S5WGXFiSF1yaqkjCdESx9db0aWOebDA2/view>
+
 ## Usage
 
 The Employee Tracker is a command line app that provides the following functionalities:
